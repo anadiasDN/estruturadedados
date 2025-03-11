@@ -1,1 +1,47 @@
+#include <stdio.h>
 
+#define MAX_PROD 4
+
+struct produto {
+    char nome[50];
+    int qtd;
+    float preco;
+    char marca [50];
+};
+
+int main(){
+     
+    
+     
+     struct produto produtos[MAX_PROD];
+     printf("cadastre os produtos.\n");
+     
+     for(int i = 0; i < MAX_PROD; i++){
+	 
+     printf("\nProduto %d:\n", i + 1);
+     printf("Insira o nome do produto:\n", i+1);
+     scanf(" %[^]%*c", produtos[i].nome);
+     
+     printf("Insira a quantidade em estoque\n");
+     scanf("%d", produtos[i].qtd);
+     
+     printf("Insira o preco do produto\n");
+     scanf("%f", produtos[i].preco);
+     
+     printf("Insira a marca do produto\n");
+     scanf("%[^]%*c", produtos[i].marca);
+    }
+    
+    printf("Lista de produtos cadastrados:\n");
+    
+    for(int i = 0; i<MAX_PROD; i++){
+    	
+    	printf("Produto %d\n", i + 1);
+    	printf("Nome:%s\n", produtos[i].nome);
+		printf("Quantidade:%d\n", produtos[i].qtd);
+		printf("Preco:%.2f\n", produtos[i].preco);
+		printf("Marca:%s\n", produtos[i].marca);
+	}
+    
+    return 0;
+};
