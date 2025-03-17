@@ -1,8 +1,8 @@
 //programa que receba inf de uma pessoa e sejam armazenadas em
 //uma struct com os atributos nome, idade e altura
 
-//crie tambÈm uma funÁ„o chamada crescer que ir· receber um ponteiro
-//que aponta para a struct pessoa e ir· alterar os atributos idade e altura
+//crie tamb√©m uma fun√ß√£o chamada crescer que ir√° receber um ponteiro
+//que aponta para a struct pessoa e ir√° alterar os atributos idade e altura
 
 //imprima o resultado no final do programa
 
@@ -16,7 +16,7 @@ int main(){
 	
 	setlocale(LC_ALL, "pt_BR.utf8");
 
- struct dadosPessoa{ //a struct È um tipo de dado criado e precisa ser chamado 
+ struct dadosPessoa{ //a struct √© um tipo de dado criado e precisa ser chamado 
 	
 	char nome[50];
 	int idade;
@@ -47,13 +47,13 @@ void crescer (struct dadosPessoa  *p){
 	
 	crescer(&pessoa);
 		
-	printf("Depois da modificaÁ„o: %s, %d anos, %.2f m\n", pessoa.nome, pessoa.idade, pessoa.altura);
+	printf("Depois da modifica√ß√£o: %s, %d anos, %.2f m\n", pessoa.nome, pessoa.idade, pessoa.altura);
 
 }	
 	
 
 
-
+kkkkkkkkkkkkkkkkkk
 
 
 
