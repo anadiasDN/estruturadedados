@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+struct pessoas {
+    char nome[50];
+    int idade;
+};
+
+int main() {
+    struct pessoas pessoa1, pessoa2, pessoa3;
+
+    printf("Insira o nome da pessoa 1: ");
+    fgets(pessoa1.nome, 50, stdin);
+    printf("Insira a idade da pessoa 1: ");
+    scanf("%d", &pessoa1.idade);
+    getchar(); // Limpa o \n do buffer
+
+    printf("Insira o nome da pessoa 2: ");
+    fgets(pessoa2.nome, 50, stdin);
+    printf("Insira a idade da pessoa 2: ");
+    scanf("%d", &pessoa2.idade);
+    getchar(); // Limpa o \n do buffer
+
+    printf("Insira o nome da pessoa 3: ");
+    fgets(pessoa3.nome, 50, stdin);
+    printf("Insira a idade da pessoa 3: ");
+    scanf("%d", &pessoa3.idade);
+    getchar(); // Limpa o \n do buffer
+
+    printf("\n=== Dados das Pessoas ===\n");
+    printf("Nome: %sIdade: %d\n", pessoa1.nome, pessoa1.idade);
+    printf("Nome: %sIdade: %d\n", pessoa2.nome, pessoa2.idade);
+    printf("Nome: %sIdade: %d\n", pessoa3.nome, pessoa3.idade);
+
+    return 0;
+}
