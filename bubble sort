@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Pessoa {
+    char nome[50];
+    int idade;
+};
+
+void bubbleSort(struct Pessoa pessoas[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (pessoas[j].idade < pessoas[j + 1].idade) {
+                struct Pessoa temp = pessoas[j];
+                pessoas[j] = pessoas[j + 1];
+                pessoas[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int n;
+    printf("Quantas pessoas deseja cadastrar? ");
+    scanf("%d", &n);
+    getchar(); // Para limpar o buffer
+
+    struct Pessoa pessoas[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("Insira o nome da pessoa %d: ", i + 1);
+        fgets(pessoas[i].nome, 50, stdin);
+        pessoas[i].nome[strcspn(pessoas[i].nome, "\n")] = 0; // Remover o \n do fgets
+
+        printf("Insira a idade da pessoa %d: ", i + 1);
+        scanf("%d", &pessoas[i].idade);
+        getchar(); // Para limpar o \n do buffer
+    }
+
+    bubbleSort(pessoas, n);
+
+    printf("\nLista de pessoas ordenadas pelo mais velho ao mais novo:\n");
+    for (int i = 0; i < n; i++) {
+        printf("Nome: %s, Idade: %d\n", pessoas[i].nome, pessoas[i].idade);
+    }
+
+    return 0;
+}
